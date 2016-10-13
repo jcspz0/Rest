@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2016-10-12 10:47:49
+Date: 2016-10-13 14:48:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -21,15 +21,15 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `callbacks`;
 CREATE TABLE `callbacks` (
 `id`  int(10) UNSIGNED NOT NULL AUTO_INCREMENT ,
-`task`  varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL ,
-`activity_history`  bigint(20) NOT NULL ,
+`alternativeIdentifier`  varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL ,
+`activity_history_id`  bigint(20) NOT NULL ,
 `created_at`  timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ,
 `updated_at`  timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ,
 PRIMARY KEY (`id`)
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_unicode_ci
-AUTO_INCREMENT=11
+AUTO_INCREMENT=24
 
 ;
 
@@ -52,7 +52,7 @@ PRIMARY KEY (`id`)
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_unicode_ci
-AUTO_INCREMENT=3
+AUTO_INCREMENT=54
 
 ;
 
@@ -79,7 +79,6 @@ DEFAULT CHARACTER SET=utf8 COLLATE=utf8_unicode_ci
 -- Records of migrations
 -- ----------------------------
 BEGIN;
-INSERT INTO `migrations` VALUES ('2014_10_12_000000_create_users_table', '1'), ('2014_10_12_100000_create_password_resets_table', '1'), ('2016_10_12_121117_create_callback_table', '1'), ('2016_10_12_122752_create_logs_table', '2');
 COMMIT;
 
 -- ----------------------------
@@ -134,12 +133,12 @@ COMMIT;
 -- ----------------------------
 -- Auto increment value for callbacks
 -- ----------------------------
-ALTER TABLE `callbacks` AUTO_INCREMENT=11;
+ALTER TABLE `callbacks` AUTO_INCREMENT=24;
 
 -- ----------------------------
 -- Auto increment value for logs
 -- ----------------------------
-ALTER TABLE `logs` AUTO_INCREMENT=3;
+ALTER TABLE `logs` AUTO_INCREMENT=54;
 
 -- ----------------------------
 -- Auto increment value for users

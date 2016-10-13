@@ -14,8 +14,8 @@ class CreateCallbackTable extends Migration
     {
         Schema::create('callbacks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('task');
-            $table->bigInteger('activity_history');
+            $table->string('alternativeIdentifier');
+            $table->bigInteger('activity_history_id');
             $table->timestamps();
         });
     }

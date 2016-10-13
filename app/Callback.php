@@ -18,7 +18,7 @@ class Callback extends Model
      *
      * @var array
      */
-    protected $fillable = ['task', 'activity_history'];
+    protected $fillable = ['alternativeIdentifier', 'activity_history_id'];
 
     /**
      * The attributes excluded from the model's JSON form.
